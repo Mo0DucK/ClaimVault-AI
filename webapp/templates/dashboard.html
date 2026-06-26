@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-12 mb-4">
+        <h2>Your Claims Dashboard</h2>
+        <p class="text-muted">Manage your active claims and monitoring subscriptions.</p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-8">
+        <div class="card shadow-sm mb-4">
+            <div class="card-header bg-white">
+                <h3 class="h5 mb-0">My Claims</h3>
+            </div>
+            <div class="card-body">
+                {% if claims %}
+                <div class="table-responsive">
+                    <table class="table align-middle">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Jurisdiction</th>
+                                <th>Asset</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for claim in claims %}
+                            <tr>
+                                <td>{{ claim.created_at.strftime('%Y-%m-%d') }}</td>
+                                <td>{{ claim.jurisdiction_name }}</td>
+                                <td>{{ claim.asset_type }}</td>
+                                <td>
+                                    {% if claim.is_scam %}
+                                        <span class="badge bg-danger">Scam Flagged</span>
+                                    {% elif claim.has_kit %}
+                                        <span class="badge bg-success">Kit Ready</span>
+                                    {% else %}
+                                        <span class="badge bg-info">Analyzed</span>
+                                    {% endif %}
+                                </td>
+                                <td>
+                                    {% if claim.has_kit %}
+                                        <a href="{{ url_for('kit', claim_id=claim.id) }}" class="btn btn-sm btn-primary">View Kit</a>
+                                    {% else %}
+                                        <a href="{{ url_for('checkout', item_type='kit') }}" class="btn btn-sm btn-outline-primary">Unlock Kit</a>
+                                    {% endif %}
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                {% else %}
+                <p class="text-center py-4">You haven't uploaded any letters yet. <a href="{{ url_for('index') }}">Start here</a>.</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card shadow-sm">
+            <div class="card-header bg-white">
+                <h3 class="h5 mb-0">Active Subscriptions</h3>
+            </div>
+            <div class="card-body text-center py-4">
+                {% if current_user.has_monitoring %}
+                    <p><strong>Monitoring:</strong> <span class="text-success">Active</span></p>
+                    <p class="small text-muted">We are currently monitoring 5 family surnames for you.</p>
+                    <a href="#" class="btn btn-outline-primary btn-sm">Manage Monitoring</a>
+                {% else %}
+                    <p><strong>Monitoring:</strong> <span class="text-danger">Inactive</span></p>
+                    <p class="small text-muted">Monitor your family name across 50+ jurisdictions for new assets.</p>
+                    <a href="{{ url_for('checkout', item_type='subscription') }}" class="btn btn-primary">Enable Monitoring ($149/yr)</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

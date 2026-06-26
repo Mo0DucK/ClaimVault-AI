@@ -1,0 +1,55 @@
+{
+  "scam_patterns": [
+    {
+      "type": "Heir Hunter / Finder Fee",
+      "red_flags": [
+        "Percentage fee (typically 25% to 50%)",
+        "Request for upfront payment",
+        "Urgency/Time-sensitive claims",
+        "Vague description of assets",
+        "Lack of official government letterhead",
+        "Use of 'Official-looking' but fake seals"
+      ],
+      "common_phrases": [
+        "We have located unclaimed assets in your name",
+        "You are a potential heir to an estate",
+        "A court-ordered notification regarding dormant accounts",
+        "Immediate action required to prevent escheatment to the state",
+        "Confidential discovery of funds",
+        "Our fee is a percentage of the recovered amount"
+      ],
+      "known_firm_names": [
+        "Global Heir Search",
+        "Asset Recovery Group LLC",
+        "International Probate Research",
+        "Legacy Asset Locators",
+        "Heir Finders Inc."
+      ],
+      "formatting_patterns": [
+        "Excessive use of bold or capitalized text",
+        "Poor grammar or spelling in 'official' documents",
+        "Return address is a PO Box or residential address",
+        "Generic 'To the Heir of [Name]'"
+      ]
+    },
+    {
+      "type": "Advance Fee Scam",
+      "red_flags": [
+        "Asks for 'tax' or 'processing fee' via wire transfer or gift card",
+        "Claims to be from a foreign central bank or government office",
+        "Guarantees a large payout for a small initial investment"
+      ],
+      "common_phrases": [
+        "Funds are being held in the Central Bank",
+        "Anti-money laundering clearance certificate required",
+        "Taxes must be paid before release of inheritance"
+      ]
+    }
+  ],
+  "verification_steps": [
+    "Check the official state unclaimed property website directly",
+    "Verify the firm with the Better Business Bureau (BBB)",
+    "Contact the state treasury or controller's office directly",
+    "Never pay upfront fees for unclaimed property search"
+  ]
+}

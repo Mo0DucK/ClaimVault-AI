@@ -1,0 +1,920 @@
+[
+  {
+    "state": "Alabama",
+    "portal_url": "https://unclaimed.alabama.gov/",
+    "missing_money_participant": true,
+    "required_documents": [
+      "Signed Claim Form",
+      "Copy of Driver's License/ID",
+      "Proof of Social Security Number",
+      "Proof of reported address (if different from current)"
+    ],
+    "deceased_owner_documents": [
+      "Death Certificate",
+      "Will or Probate Court Documents",
+      "Proof of relationship to deceased"
+    ],
+    "processing_time": "90-120 days",
+    "mailing_address": "See state portal for specific department address"
+  },
+  {
+    "state": "Alaska",
+    "portal_url": "https://unclaimedproperty.alaska.gov/",
+    "missing_money_participant": true,
+    "required_documents": [
+      "Signed Claim Form",
+      "Copy of Driver's License/ID",
+      "Proof of Social Security Number",
+      "Proof of reported address (if different from current)"
+    ],
+    "deceased_owner_documents": [
+      "Death Certificate",
+      "Will or Probate Court Documents",
+      "Proof of relationship to deceased"
+    ],
+    "processing_time": "90-120 days",
+    "mailing_address": "See state portal for specific department address"
+  },
+  {
+    "state": "Arizona",
+    "portal_url": "https://azdor.gov/unclaimed-property",
+    "missing_money_participant": true,
+    "required_documents": [
+      "Signed Claim Form",
+      "Copy of Driver's License/ID",
+      "Proof of Social Security Number",
+      "Proof of reported address (if different from current)"
+    ],
+    "deceased_owner_documents": [
+      "Death Certificate",
+      "Will or Probate Court Documents",
+      "Proof of relationship to deceased"
+    ],
+    "processing_time": "90-120 days",
+    "mailing_address": "See state portal for specific department address"
+  },
+  {
+    "state": "Arkansas",
+    "portal_url": "https://portal.arkansas.gov/service/unclaimed-property-search/",
+    "missing_money_participant": true,
+    "required_documents": [
+      "Signed Claim Form",
+      "Copy of Driver's License/ID",
+      "Proof of Social Security Number",
+      "Proof of reported address (if different from current)"
+    ],
+    "deceased_owner_documents": [
+      "Death Certificate",
+      "Will or Probate Court Documents",
+      "Proof of relationship to deceased"
+    ],
+    "processing_time": "90-120 days",
+    "mailing_address": "See state portal for specific department address"
+  },
+  {
+    "state": "California",
+    "portal_url": "https://www.sco.ca.gov/up.html",
+    "missing_money_participant": false,
+    "required_documents": [
+      "Signed Claim Form",
+      "Copy of Driver's License/ID",
+      "Proof of Social Security Number",
+      "Proof of reported address (if different from current)"
+    ],
+    "deceased_owner_documents": [
+      "Death Certificate",
+      "Will or Probate Court Documents",
+      "Proof of relationship to deceased"
+    ],
+    "processing_time": "90-120 days",
+    "mailing_address": "See state portal for specific department address"
+  },
+  {
+    "state": "Colorado",
+    "portal_url": "https://colorado.findyourunclaimedproperty.com/",
+    "missing_money_participant": true,
+    "required_documents": [
+      "Signed Claim Form",
+      "Copy of Driver's License/ID",
+      "Proof of Social Security Number",
+      "Proof of reported address (if different from current)"
+    ],
+    "deceased_owner_documents": [
+      "Death Certificate",
+      "Will or Probate Court Documents",
+      "Proof of relationship to deceased"
+    ],
+    "processing_time": "90-120 days",
+    "mailing_address": "See state portal for specific department address"
+  },
+  {
+    "state": "Connecticut",
+    "portal_url": "https://ctbiglist.com/",
+    "missing_money_participant": false,
+    "required_documents": [
+      "Signed Claim Form",
+      "Copy of Driver's License/ID",
+      "Proof of Social Security Number",
+      "Proof of reported address (if different from current)"
+    ],
+    "deceased_owner_documents": [
+      "Death Certificate",
+      "Will or Probate Court Documents",
+      "Proof of relationship to deceased"
+    ],
+    "processing_time": "90-120 days",
+    "mailing_address": "See state portal for specific department address"
+  },
+  {
+    "state": "Delaware",
+    "portal_url": "https://unclaimedproperty.delaware.gov/",
+    "missing_money_participant": false,
+    "required_documents": [
+      "Signed Claim Form",
+      "Copy of Driver's License/ID",
+      "Proof of Social Security Number",
+      "Proof of reported address (if different from current)"
+    ],
+    "deceased_owner_documents": [
+      "Death Certificate",
+      "Will or Probate Court Documents",
+      "Proof of relationship to deceased"
+    ],
+    "processing_time": "90-120 days",
+    "mailing_address": "See state portal for specific department address"
+  },
+  {
+    "state": "District of Columbia",
+    "portal_url": "https://dcforms.dc.gov/reporter/",
+    "missing_money_participant": true,
+    "required_documents": [
+      "Signed Claim Form",
+      "Copy of Driver's License/ID",
+      "Proof of Social Security Number",
+      "Proof of reported address (if different from current)"
+    ],
+    "deceased_owner_documents": [
+      "Death Certificate",
+      "Will or Probate Court Documents",
+      "Proof of relationship to deceased"
+    ],
+    "processing_time": "90-120 days",
+    "mailing_address": "See state portal for specific department address"
+  },
+  {
+    "state": "Florida",
+    "portal_url": "https://www.fltreasurehunt.gov/",
+    "missing_money_participant": true,
+    "required_documents": [
+      "Signed Claim Form",
+      "Copy of Driver's License/ID",
+      "Proof of Social Security Number",
+      "Proof of reported address (if different from current)"
+    ],
+    "deceased_owner_documents": [
+      "Death Certificate",
+      "Will or Probate Court Documents",
+      "Proof of relationship to deceased"
+    ],
+    "processing_time": "90-120 days",
+    "mailing_address": "See state portal for specific department address"
+  },
+  {
+    "state": "Georgia",
+    "portal_url": "https://dor.georgia.gov/unclaimed-property-program",
+    "missing_money_participant": true,
+    "required_documents": [
+      "Signed Claim Form",
+      "Copy of Driver's License/ID",
+      "Proof of Social Security Number",
+      "Proof of reported address (if different from current)"
+    ],
+    "deceased_owner_documents": [
+      "Death Certificate",
+      "Will or Probate Court Documents",
+      "Proof of relationship to deceased"
+    ],
+    "processing_time": "90-120 days",
+    "mailing_address": "See state portal for specific department address"
+  },
+  {
+    "state": "Hawaii",
+    "portal_url": "https://budget.hawaii.gov/itax/",
+    "missing_money_participant": false,
+    "required_documents": [
+      "Signed Claim Form",
+      "Copy of Driver's License/ID",
+      "Proof of Social Security Number",
+      "Proof of reported address (if different from current)"
+    ],
+    "deceased_owner_documents": [
+      "Death Certificate",
+      "Will or Probate Court Documents",
+      "Proof of relationship to deceased"
+    ],
+    "processing_time": "90-120 days",
+    "mailing_address": "See state portal for specific department address"
+  },
+  {
+    "state": "Idaho",
+    "portal_url": "https://yourmoney.idaho.gov/",
+    "missing_money_participant": true,
+    "required_documents": [
+      "Signed Claim Form",
+      "Copy of Driver's License/ID",
+      "Proof of Social Security Number",
+      "Proof of reported address (if different from current)"
+    ],
+    "deceased_owner_documents": [
+      "Death Certificate",
+      "Will or Probate Court Documents",
+      "Proof of relationship to deceased"
+    ],
+    "processing_time": "90-120 days",
+    "mailing_address": "See state portal for specific department address"
+  },
+  {
+    "state": "Illinois",
+    "portal_url": "https://icash.illinoistreasurer.gov/",
+    "missing_money_participant": true,
+    "required_documents": [
+      "Signed Claim Form",
+      "Copy of Driver's License/ID",
+      "Proof of Social Security Number",
+      "Proof of reported address (if different from current)"
+    ],
+    "deceased_owner_documents": [
+      "Death Certificate",
+      "Will or Probate Court Documents",
+      "Proof of relationship to deceased"
+    ],
+    "processing_time": "90-120 days",
+    "mailing_address": "See state portal for specific department address"
+  },
+  {
+    "state": "Indiana",
+    "portal_url": "https://www.indianaunclaimed.gov/",
+    "missing_money_participant": true,
+    "required_documents": [
+      "Signed Claim Form",
+      "Copy of Driver's License/ID",
+      "Proof of Social Security Number",
+      "Proof of reported address (if different from current)"
+    ],
+    "deceased_owner_documents": [
+      "Death Certificate",
+      "Will or Probate Court Documents",
+      "Proof of relationship to deceased"
+    ],
+    "processing_time": "90-120 days",
+    "mailing_address": "See state portal for specific department address"
+  },
+  {
+    "state": "Iowa",
+    "portal_url": "https://www.greatiowatreasurehunt.gov/",
+    "missing_money_participant": true,
+    "required_documents": [
+      "Signed Claim Form",
+      "Copy of Driver's License/ID",
+      "Proof of Social Security Number",
+      "Proof of reported address (if different from current)"
+    ],
+    "deceased_owner_documents": [
+      "Death Certificate",
+      "Will or Probate Court Documents",
+      "Proof of relationship to deceased"
+    ],
+    "processing_time": "90-120 days",
+    "mailing_address": "See state portal for specific department address"
+  },
+  {
+    "state": "Kansas",
+    "portal_url": "https://kansascash.ks.gov/",
+    "missing_money_participant": true,
+    "required_documents": [
+      "Signed Claim Form",
+      "Copy of Driver's License/ID",
+      "Proof of Social Security Number",
+      "Proof of reported address (if different from current)"
+    ],
+    "deceased_owner_documents": [
+      "Death Certificate",
+      "Will or Probate Court Documents",
+      "Proof of relationship to deceased"
+    ],
+    "processing_time": "90-120 days",
+    "mailing_address": "See state portal for specific department address"
+  },
+  {
+    "state": "Kentucky",
+    "portal_url": "https://unclaimed.ky.gov/",
+    "missing_money_participant": true,
+    "required_documents": [
+      "Signed Claim Form",
+      "Copy of Driver's License/ID",
+      "Proof of Social Security Number",
+      "Proof of reported address (if different from current)"
+    ],
+    "deceased_owner_documents": [
+      "Death Certificate",
+      "Will or Probate Court Documents",
+      "Proof of relationship to deceased"
+    ],
+    "processing_time": "90-120 days",
+    "mailing_address": "See state portal for specific department address"
+  },
+  {
+    "state": "Louisiana",
+    "portal_url": "https://www.lacash.gov/",
+    "missing_money_participant": true,
+    "required_documents": [
+      "Signed Claim Form",
+      "Copy of Driver's License/ID",
+      "Proof of Social Security Number",
+      "Proof of reported address (if different from current)"
+    ],
+    "deceased_owner_documents": [
+      "Death Certificate",
+      "Will or Probate Court Documents",
+      "Proof of relationship to deceased"
+    ],
+    "processing_time": "90-120 days",
+    "mailing_address": "See state portal for specific department address"
+  },
+  {
+    "state": "Maine",
+    "portal_url": "https://www.maine.gov/treasurer/unclaimed_property/",
+    "missing_money_participant": true,
+    "required_documents": [
+      "Signed Claim Form",
+      "Copy of Driver's License/ID",
+      "Proof of Social Security Number",
+      "Proof of reported address (if different from current)"
+    ],
+    "deceased_owner_documents": [
+      "Death Certificate",
+      "Will or Probate Court Documents",
+      "Proof of relationship to deceased"
+    ],
+    "processing_time": "90-120 days",
+    "mailing_address": "See state portal for specific department address"
+  },
+  {
+    "state": "Maryland",
+    "portal_url": "https://www.marylandtaxes.gov/unclaimed-property/",
+    "missing_money_participant": true,
+    "required_documents": [
+      "Signed Claim Form",
+      "Copy of Driver's License/ID",
+      "Proof of Social Security Number",
+      "Proof of reported address (if different from current)"
+    ],
+    "deceased_owner_documents": [
+      "Death Certificate",
+      "Will or Probate Court Documents",
+      "Proof of relationship to deceased"
+    ],
+    "processing_time": "90-120 days",
+    "mailing_address": "See state portal for specific department address"
+  },
+  {
+    "state": "Massachusetts",
+    "portal_url": "https://www.mass.gov/orgs/unclaimed-property-division",
+    "missing_money_participant": true,
+    "required_documents": [
+      "Signed Claim Form",
+      "Copy of Driver's License/ID",
+      "Proof of Social Security Number",
+      "Proof of reported address (if different from current)"
+    ],
+    "deceased_owner_documents": [
+      "Death Certificate",
+      "Will or Probate Court Documents",
+      "Proof of relationship to deceased"
+    ],
+    "processing_time": "90-120 days",
+    "mailing_address": "See state portal for specific department address"
+  },
+  {
+    "state": "Michigan",
+    "portal_url": "https://www.michigan.gov/unclaimedproperty",
+    "missing_money_participant": true,
+    "required_documents": [
+      "Signed Claim Form",
+      "Copy of Driver's License/ID",
+      "Proof of Social Security Number",
+      "Proof of reported address (if different from current)"
+    ],
+    "deceased_owner_documents": [
+      "Death Certificate",
+      "Will or Probate Court Documents",
+      "Proof of relationship to deceased"
+    ],
+    "processing_time": "90-120 days",
+    "mailing_address": "See state portal for specific department address"
+  },
+  {
+    "state": "Minnesota",
+    "portal_url": "https://mn.gov/commerce/consumers/unclaimed-property/",
+    "missing_money_participant": true,
+    "required_documents": [
+      "Signed Claim Form",
+      "Copy of Driver's License/ID",
+      "Proof of Social Security Number",
+      "Proof of reported address (if different from current)"
+    ],
+    "deceased_owner_documents": [
+      "Death Certificate",
+      "Will or Probate Court Documents",
+      "Proof of relationship to deceased"
+    ],
+    "processing_time": "90-120 days",
+    "mailing_address": "See state portal for specific department address"
+  },
+  {
+    "state": "Mississippi",
+    "portal_url": "https://www.treasury.ms.gov/unclaimed-property/",
+    "missing_money_participant": true,
+    "required_documents": [
+      "Signed Claim Form",
+      "Copy of Driver's License/ID",
+      "Proof of Social Security Number",
+      "Proof of reported address (if different from current)"
+    ],
+    "deceased_owner_documents": [
+      "Death Certificate",
+      "Will or Probate Court Documents",
+      "Proof of relationship to deceased"
+    ],
+    "processing_time": "90-120 days",
+    "mailing_address": "See state portal for specific department address"
+  },
+  {
+    "state": "Missouri",
+    "portal_url": "https://treasurer.mo.gov/unclaimedproperty/",
+    "missing_money_participant": true,
+    "required_documents": [
+      "Signed Claim Form",
+      "Copy of Driver's License/ID",
+      "Proof of Social Security Number",
+      "Proof of reported address (if different from current)"
+    ],
+    "deceased_owner_documents": [
+      "Death Certificate",
+      "Will or Probate Court Documents",
+      "Proof of relationship to deceased"
+    ],
+    "processing_time": "90-120 days",
+    "mailing_address": "See state portal for specific department address"
+  },
+  {
+    "state": "Montana",
+    "portal_url": "https://mtrevenue.gov/unclaimed-property/",
+    "missing_money_participant": true,
+    "required_documents": [
+      "Signed Claim Form",
+      "Copy of Driver's License/ID",
+      "Proof of Social Security Number",
+      "Proof of reported address (if different from current)"
+    ],
+    "deceased_owner_documents": [
+      "Death Certificate",
+      "Will or Probate Court Documents",
+      "Proof of relationship to deceased"
+    ],
+    "processing_time": "90-120 days",
+    "mailing_address": "See state portal for specific department address"
+  },
+  {
+    "state": "Nebraska",
+    "portal_url": "https://treasurer.nebraska.gov/up/",
+    "missing_money_participant": true,
+    "required_documents": [
+      "Signed Claim Form",
+      "Copy of Driver's License/ID",
+      "Proof of Social Security Number",
+      "Proof of reported address (if different from current)"
+    ],
+    "deceased_owner_documents": [
+      "Death Certificate",
+      "Will or Probate Court Documents",
+      "Proof of relationship to deceased"
+    ],
+    "processing_time": "90-120 days",
+    "mailing_address": "See state portal for specific department address"
+  },
+  {
+    "state": "Nevada",
+    "portal_url": "https://nevadatreasurer.gov/Unclaimed_Property/",
+    "missing_money_participant": true,
+    "required_documents": [
+      "Signed Claim Form",
+      "Copy of Driver's License/ID",
+      "Proof of Social Security Number",
+      "Proof of reported address (if different from current)"
+    ],
+    "deceased_owner_documents": [
+      "Death Certificate",
+      "Will or Probate Court Documents",
+      "Proof of relationship to deceased"
+    ],
+    "processing_time": "90-120 days",
+    "mailing_address": "See state portal for specific department address"
+  },
+  {
+    "state": "New Hampshire",
+    "portal_url": "https://www.nh.gov/treasury/unclaimed-property/",
+    "missing_money_participant": true,
+    "required_documents": [
+      "Signed Claim Form",
+      "Copy of Driver's License/ID",
+      "Proof of Social Security Number",
+      "Proof of reported address (if different from current)"
+    ],
+    "deceased_owner_documents": [
+      "Death Certificate",
+      "Will or Probate Court Documents",
+      "Proof of relationship to deceased"
+    ],
+    "processing_time": "90-120 days",
+    "mailing_address": "See state portal for specific department address"
+  },
+  {
+    "state": "New Jersey",
+    "portal_url": "https://www.unclaimedproperty.nj.gov/",
+    "missing_money_participant": true,
+    "required_documents": [
+      "Signed Claim Form",
+      "Copy of Driver's License/ID",
+      "Proof of Social Security Number",
+      "Proof of reported address (if different from current)"
+    ],
+    "deceased_owner_documents": [
+      "Death Certificate",
+      "Will or Probate Court Documents",
+      "Proof of relationship to deceased"
+    ],
+    "processing_time": "90-120 days",
+    "mailing_address": "See state portal for specific department address"
+  },
+  {
+    "state": "New Mexico",
+    "portal_url": "https://www.tax.newmexico.gov/individuals/unclaimed-property-for-individuals/",
+    "missing_money_participant": true,
+    "required_documents": [
+      "Signed Claim Form",
+      "Copy of Driver's License/ID",
+      "Proof of Social Security Number",
+      "Proof of reported address (if different from current)"
+    ],
+    "deceased_owner_documents": [
+      "Death Certificate",
+      "Will or Probate Court Documents",
+      "Proof of relationship to deceased"
+    ],
+    "processing_time": "90-120 days",
+    "mailing_address": "See state portal for specific department address"
+  },
+  {
+    "state": "New York",
+    "portal_url": "https://www.osc.ny.gov/unclaimed-funds",
+    "missing_money_participant": true,
+    "required_documents": [
+      "Signed Claim Form",
+      "Copy of Driver's License/ID",
+      "Proof of Social Security Number",
+      "Proof of reported address (if different from current)"
+    ],
+    "deceased_owner_documents": [
+      "Death Certificate",
+      "Will or Probate Court Documents",
+      "Proof of relationship to deceased"
+    ],
+    "processing_time": "90-120 days",
+    "mailing_address": "See state portal for specific department address"
+  },
+  {
+    "state": "North Carolina",
+    "portal_url": "https://www.nccash.com/",
+    "missing_money_participant": true,
+    "required_documents": [
+      "Signed Claim Form",
+      "Copy of Driver's License/ID",
+      "Proof of Social Security Number",
+      "Proof of reported address (if different from current)"
+    ],
+    "deceased_owner_documents": [
+      "Death Certificate",
+      "Will or Probate Court Documents",
+      "Proof of relationship to deceased"
+    ],
+    "processing_time": "90-120 days",
+    "mailing_address": "See state portal for specific department address"
+  },
+  {
+    "state": "North Dakota",
+    "portal_url": "https://www.unclaimedproperty.nd.gov/",
+    "missing_money_participant": true,
+    "required_documents": [
+      "Signed Claim Form",
+      "Copy of Driver's License/ID",
+      "Proof of Social Security Number",
+      "Proof of reported address (if different from current)"
+    ],
+    "deceased_owner_documents": [
+      "Death Certificate",
+      "Will or Probate Court Documents",
+      "Proof of relationship to deceased"
+    ],
+    "processing_time": "90-120 days",
+    "mailing_address": "See state portal for specific department address"
+  },
+  {
+    "state": "Ohio",
+    "portal_url": "https://unclaimedfundsonline.comohio.gov/",
+    "missing_money_participant": true,
+    "required_documents": [
+      "Signed Claim Form",
+      "Copy of Driver's License/ID",
+      "Proof of Social Security Number",
+      "Proof of reported address (if different from current)"
+    ],
+    "deceased_owner_documents": [
+      "Death Certificate",
+      "Will or Probate Court Documents",
+      "Proof of relationship to deceased"
+    ],
+    "processing_time": "90-120 days",
+    "mailing_address": "See state portal for specific department address"
+  },
+  {
+    "state": "Oklahoma",
+    "portal_url": "https://www.ok.gov/treasurer/Unclaimed_Property/",
+    "missing_money_participant": true,
+    "required_documents": [
+      "Signed Claim Form",
+      "Copy of Driver's License/ID",
+      "Proof of Social Security Number",
+      "Proof of reported address (if different from current)"
+    ],
+    "deceased_owner_documents": [
+      "Death Certificate",
+      "Will or Probate Court Documents",
+      "Proof of relationship to deceased"
+    ],
+    "processing_time": "90-120 days",
+    "mailing_address": "See state portal for specific department address"
+  },
+  {
+    "state": "Oregon",
+    "portal_url": "https://unclaimed.oregon.gov/",
+    "missing_money_participant": false,
+    "required_documents": [
+      "Signed Claim Form",
+      "Copy of Driver's License/ID",
+      "Proof of Social Security Number",
+      "Proof of reported address (if different from current)"
+    ],
+    "deceased_owner_documents": [
+      "Death Certificate",
+      "Will or Probate Court Documents",
+      "Proof of relationship to deceased"
+    ],
+    "processing_time": "90-120 days",
+    "mailing_address": "See state portal for specific department address"
+  },
+  {
+    "state": "Pennsylvania",
+    "portal_url": "https://www.patreasury.gov/unclaimed-property/",
+    "missing_money_participant": true,
+    "required_documents": [
+      "Signed Claim Form",
+      "Copy of Driver's License/ID",
+      "Proof of Social Security Number",
+      "Proof of reported address (if different from current)"
+    ],
+    "deceased_owner_documents": [
+      "Death Certificate",
+      "Will or Probate Court Documents",
+      "Proof of relationship to deceased"
+    ],
+    "processing_time": "90-120 days",
+    "mailing_address": "See state portal for specific department address"
+  },
+  {
+    "state": "Rhode Island",
+    "portal_url": "https://findritreasure.com/",
+    "missing_money_participant": true,
+    "required_documents": [
+      "Signed Claim Form",
+      "Copy of Driver's License/ID",
+      "Proof of Social Security Number",
+      "Proof of reported address (if different from current)"
+    ],
+    "deceased_owner_documents": [
+      "Death Certificate",
+      "Will or Probate Court Documents",
+      "Proof of relationship to deceased"
+    ],
+    "processing_time": "90-120 days",
+    "mailing_address": "See state portal for specific department address"
+  },
+  {
+    "state": "South Carolina",
+    "portal_url": "https://treasurer.sc.gov/unclaimed-property/",
+    "missing_money_participant": true,
+    "required_documents": [
+      "Signed Claim Form",
+      "Copy of Driver's License/ID",
+      "Proof of Social Security Number",
+      "Proof of reported address (if different from current)"
+    ],
+    "deceased_owner_documents": [
+      "Death Certificate",
+      "Will or Probate Court Documents",
+      "Proof of relationship to deceased"
+    ],
+    "processing_time": "90-120 days",
+    "mailing_address": "See state portal for specific department address"
+  },
+  {
+    "state": "South Dakota",
+    "portal_url": "https://southdakota.unclaimedproperty.com/",
+    "missing_money_participant": true,
+    "required_documents": [
+      "Signed Claim Form",
+      "Copy of Driver's License/ID",
+      "Proof of Social Security Number",
+      "Proof of reported address (if different from current)"
+    ],
+    "deceased_owner_documents": [
+      "Death Certificate",
+      "Will or Probate Court Documents",
+      "Proof of relationship to deceased"
+    ],
+    "processing_time": "90-120 days",
+    "mailing_address": "See state portal for specific department address"
+  },
+  {
+    "state": "Tennessee",
+    "portal_url": "https://unclaimedmoney.tennessee.edu/",
+    "missing_money_participant": true,
+    "required_documents": [
+      "Signed Claim Form",
+      "Copy of Driver's License/ID",
+      "Proof of Social Security Number",
+      "Proof of reported address (if different from current)"
+    ],
+    "deceased_owner_documents": [
+      "Death Certificate",
+      "Will or Probate Court Documents",
+      "Proof of relationship to deceased"
+    ],
+    "processing_time": "90-120 days",
+    "mailing_address": "See state portal for specific department address"
+  },
+  {
+    "state": "Texas",
+    "portal_url": "https://www.claimittexas.gov/",
+    "missing_money_participant": true,
+    "required_documents": [
+      "Signed Claim Form",
+      "Copy of Driver's License/ID",
+      "Proof of Social Security Number",
+      "Proof of reported address (if different from current)"
+    ],
+    "deceased_owner_documents": [
+      "Death Certificate",
+      "Will or Probate Court Documents",
+      "Proof of relationship to deceased"
+    ],
+    "processing_time": "90-120 days",
+    "mailing_address": "See state portal for specific department address"
+  },
+  {
+    "state": "Utah",
+    "portal_url": "https://mycash.utah.gov/",
+    "missing_money_participant": true,
+    "required_documents": [
+      "Signed Claim Form",
+      "Copy of Driver's License/ID",
+      "Proof of Social Security Number",
+      "Proof of reported address (if different from current)"
+    ],
+    "deceased_owner_documents": [
+      "Death Certificate",
+      "Will or Probate Court Documents",
+      "Proof of relationship to deceased"
+    ],
+    "processing_time": "90-120 days",
+    "mailing_address": "See state portal for specific department address"
+  },
+  {
+    "state": "Vermont",
+    "portal_url": "https://www.vermonttreasurer.gov/unclaimed-property",
+    "missing_money_participant": true,
+    "required_documents": [
+      "Signed Claim Form",
+      "Copy of Driver's License/ID",
+      "Proof of Social Security Number",
+      "Proof of reported address (if different from current)"
+    ],
+    "deceased_owner_documents": [
+      "Death Certificate",
+      "Will or Probate Court Documents",
+      "Proof of relationship to deceased"
+    ],
+    "processing_time": "90-120 days",
+    "mailing_address": "See state portal for specific department address"
+  },
+  {
+    "state": "Virginia",
+    "portal_url": "https://www.vamoneysearch.gov/",
+    "missing_money_participant": true,
+    "required_documents": [
+      "Signed Claim Form",
+      "Copy of Driver's License/ID",
+      "Proof of Social Security Number",
+      "Proof of reported address (if different from current)"
+    ],
+    "deceased_owner_documents": [
+      "Death Certificate",
+      "Will or Probate Court Documents",
+      "Proof of relationship to deceased"
+    ],
+    "processing_time": "90-120 days",
+    "mailing_address": "See state portal for specific department address"
+  },
+  {
+    "state": "Washington",
+    "portal_url": "https://ucp.dor.wa.gov/",
+    "missing_money_participant": true,
+    "required_documents": [
+      "Signed Claim Form",
+      "Copy of Driver's License/ID",
+      "Proof of Social Security Number",
+      "Proof of reported address (if different from current)"
+    ],
+    "deceased_owner_documents": [
+      "Death Certificate",
+      "Will or Probate Court Documents",
+      "Proof of relationship to deceased"
+    ],
+    "processing_time": "90-120 days",
+    "mailing_address": "See state portal for specific department address"
+  },
+  {
+    "state": "West Virginia",
+    "portal_url": "https://www.wvtreasury.com/Unclaimed-Property",
+    "missing_money_participant": true,
+    "required_documents": [
+      "Signed Claim Form",
+      "Copy of Driver's License/ID",
+      "Proof of Social Security Number",
+      "Proof of reported address (if different from current)"
+    ],
+    "deceased_owner_documents": [
+      "Death Certificate",
+      "Will or Probate Court Documents",
+      "Proof of relationship to deceased"
+    ],
+    "processing_time": "90-120 days",
+    "mailing_address": "See state portal for specific department address"
+  },
+  {
+    "state": "Wisconsin",
+    "portal_url": "https://unclaimedproperty.wi.gov/",
+    "missing_money_participant": true,
+    "required_documents": [
+      "Signed Claim Form",
+      "Copy of Driver's License/ID",
+      "Proof of Social Security Number",
+      "Proof of reported address (if different from current)"
+    ],
+    "deceased_owner_documents": [
+      "Death Certificate",
+      "Will or Probate Court Documents",
+      "Proof of relationship to deceased"
+    ],
+    "processing_time": "90-120 days",
+    "mailing_address": "See state portal for specific department address"
+  },
+  {
+    "state": "Wyoming",
+    "portal_url": "https://statetreasurer.wyo.gov/unclaimed-property/",
+    "missing_money_participant": true,
+    "required_documents": [
+      "Signed Claim Form",
+      "Copy of Driver's License/ID",
+      "Proof of Social Security Number",
+      "Proof of reported address (if different from current)"
+    ],
+    "deceased_owner_documents": [
+      "Death Certificate",
+      "Will or Probate Court Documents",
+      "Proof of relationship to deceased"
+    ],
+    "processing_time": "90-120 days",
+    "mailing_address": "See state portal for specific department address"
+  }
+]

@@ -1,0 +1,130 @@
+{
+  "jurisdictions": [
+    {
+      "name": "Swiss Bank Ombudsman (Dormant Accounts)",
+      "official_url": "https://www.swiss-bank-ombudsman.ch/en/dormant-accounts/",
+      "process_steps": [
+        "Search the centralized database of dormant accounts",
+        "Submit a search request via the Ombudsman",
+        "Provide proof of entitlement (inheritance documents)",
+        "Bank verifies the claim and contacts the claimant"
+      ],
+      "required_documents": [
+        "Proof of death of the account holder",
+        "Proof of relationship (birth/marriage certificates)",
+        "Official certificate of inheritance (Erbschein or equivalent)",
+        "Copy of claimant's passport"
+      ],
+      "translation_requirements": "Documents must be in German, French, or Italian, or accompanied by a certified translation.",
+      "legal_terms": {
+        "Dormant Account": "Nachrichtenlose Konten",
+        "Certificate of Inheritance": "Erbschein"
+      }
+    },
+    {
+      "name": "German Nachlassgericht (Probate Court)",
+      "official_url": "https://www.justiz.de/",
+      "process_steps": [
+        "Identify the competent Nachlassgericht (usually where the deceased last resided)",
+        "Apply for an Erbschein (Certificate of Inheritance)",
+        "Provide a list of all known heirs",
+        "Notarize the application"
+      ],
+      "required_documents": [
+        "Death certificate (Sterbeurkunde)",
+        "Marriage certificate (Heiratsurkunde)",
+        "Birth certificates of all children",
+        "The original Will (if it exists)",
+        "Apostille for all foreign documents"
+      ],
+      "translation_requirements": "All documents must be translated into German by a sworn translator.",
+      "legal_terms": {
+        "Certificate of Inheritance": "Erbschein",
+        "Probate Court": "Nachlassgericht",
+        "Heir": "Erbe"
+      }
+    },
+    {
+      "name": "UK Dormant Assets Scheme",
+      "official_url": "https://www.mylostaccount.org.uk/",
+      "process_steps": [
+        "Search via My Lost Account portal",
+        "Provide details of the suspected account holder",
+        "Wait for banks/building societies to check their records",
+        "Complete individual bank claim forms if a match is found"
+      ],
+      "required_documents": [
+        "Grant of Probate or Letters of Administration",
+        "Death certificate",
+        "Proof of identity (Passport/Driver's License)",
+        "Proof of address (Utility bill)"
+      ],
+      "translation_requirements": "Certified translations required for any non-English documents.",
+      "legal_terms": {
+        "Grant of Probate": "Legal document giving authority to manage an estate",
+        "Intestacy": "Dying without a will"
+      }
+    },
+    {
+      "name": "Italian Postal Bonds (Cassa Depositi e Prestiti)",
+      "official_url": "https://www.cdp.it/",
+      "process_steps": [
+        "Identify the series and maturity of the bonds",
+        "File a claim at any Poste Italiane branch or via CDP",
+        "Provide the 'Dichiarazione di Successione' (Inheritance Tax Return)"
+      ],
+      "required_documents": [
+        "Original physical bonds (if applicable)",
+        "Certified copy of the Declaration of Succession",
+        "Death certificate",
+        "Tax code (Codice Fiscale) for all heirs"
+      ],
+      "translation_requirements": "Translations into Italian and Apostilles required for foreign documents.",
+      "legal_terms": {
+        "Postal Bonds": "Buoni Postali Fruttiferi",
+        "Inheritance Declaration": "Dichiarazione di Successione"
+      }
+    },
+    {
+      "name": "Israeli Land Registry (Tabu)",
+      "official_url": "https://www.gov.il/en/departments/land_registration_and_settlement_of_rights",
+      "process_steps": [
+        "Obtain a land registry extract (Tabu Nesach)",
+        "Apply for an Israeli Inheritance Order if not already obtained",
+        "Register the transfer of rights at the Land Registry Office"
+      ],
+      "required_documents": [
+        "Israeli Inheritance Order (Zav Yerusha)",
+        "Application for registration of inheritance",
+        "Proof of payment of registration fees"
+      ],
+      "translation_requirements": "Documents must be in Hebrew or Arabic, or translated by a notary.",
+      "legal_terms": {
+        "Land Registry": "Tabu",
+        "Inheritance Order": "Zav Yerusha"
+      }
+    },
+    {
+      "name": "Polish Restitution Claims",
+      "official_url": "https://www.gov.pl/web/sprawiedliwosc/restitution",
+      "process_steps": [
+        "Identify the property or asset taken during WWII or the Communist era",
+        "Submit a claim to the Ministry of Justice or relevant local authority",
+        "Provide proof of ownership and proof of inheritance",
+        "Often requires a court process in Poland to confirm inheritance"
+      ],
+      "required_documents": [
+        "Historical property records (Księgi Wieczyste)",
+        "Birth and death certificates establishing the family tree",
+        "Polish inheritance certificate (Stwierdzenie nabycia spadku)",
+        "Power of Attorney for a Polish lawyer (often required)"
+      ],
+      "translation_requirements": "All documents must be translated into Polish by a sworn translator.",
+      "legal_terms": {
+        "Restitution": "Restytucja",
+        "Inheritance": "Spadek",
+        "Property Register": "Księga Wieczysta"
+      }
+    }
+  ]
+}

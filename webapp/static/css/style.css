@@ -1,0 +1,32 @@
+/* Custom styles for ClaimVault AI */
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer {
+    margin-top: auto;
+}
+
+.hero-section {
+    border-radius: 15px;
+    margin-bottom: 2rem;
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+}
+
+.btn-lg {
+    padding: 0.8rem 2rem;
+}
+
+/* Mobile-first adjustments */
+@media (max-width: 576px) {
+    .hero-section {
+        padding: 40px 15px;
+    }
+}

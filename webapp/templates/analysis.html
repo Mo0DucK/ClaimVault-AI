@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card shadow-sm mb-4">
+            <div class="card-header bg-white">
+                <h2 class="h4 mb-0">Analysis Results</h2>
+            </div>
+            <div class="card-body">
+                <div class="row mb-4">
+                    <div class="col-sm-4 fw-bold">Jurisdiction:</div>
+                    <div class="col-sm-8">{{ analysis.jurisdiction.name if analysis.jurisdiction is mapping else analysis.jurisdiction }}</div>
+                </div>
+                <div class="row mb-4">
+                    <div class="col-sm-4 fw-bold">Status:</div>
+                    <div class="col-sm-8">
+                        {% if analysis.is_scam %}
+                            <span class="badge bg-danger mb-2">Potential Scam Detected</span>
+                            {% if analysis.scam_warnings %}
+                            <ul class="text-danger small mb-0">
+                                {% for warning in analysis.scam_warnings %}
+                                <li>{{ warning }}</li>
+                                {% endfor %}
+                            </ul>
+                            {% endif %}
+                        {% else %}
+                            <span class="badge bg-success">Likely Legitimate</span>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <div class="col-sm-4 fw-bold">Asset Type:</div>
+                    <div class="col-sm-8">{{ analysis.asset_type }}</div>
+                </div>
+                <div class="row mb-4">
+                    <div class="col-sm-4 fw-bold">Process Overview:</div>
+                    <div class="col-sm-8">{{ analysis.overview }}</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card border-primary mb-4">
+            <div class="card-body text-center">
+                <h3 class="h5">Ready to recover your funds?</h3>
+                <p>We can generate a full personalized claim package including auto-filled forms, a submission checklist, and a professional cover letter.</p>
+                <a href="{{ url_for('checkout', item_type='kit') }}" class="btn btn-primary btn-lg">Unlock Full Claim Kit ($79)</a>
+            </div>
+        </div>
+        
+        <div class="text-center">
+            <p class="text-muted">Or monitor your family name for new assets across 50+ jurisdictions.</p>
+            <a href="{{ url_for('checkout', item_type='subscription') }}" class="btn btn-outline-secondary">Start Monitoring ($149/yr)</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

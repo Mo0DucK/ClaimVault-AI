@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card shadow-sm text-center">
+            <div class="card-body py-5">
+                <h2 class="mb-4">Complete Your Order</h2>
+                {% if item_type == 'kit' %}
+                    <h3>Personalized Claim Kit</h3>
+                    <p class="display-6 fw-bold mb-4">$79.00</p>
+                    <p>Includes all forms, checklists, and instructions for your specific claim.</p>
+                {% else %}
+                    <h3>Annual Monitoring</h3>
+                    <p class="display-6 fw-bold mb-4">$149.00/yr</p>
+                    <p>Quarterly automated searches across 50 U.S. states and major foreign registries.</p>
+                {% endif %}
+                
+                <hr class="my-4">
+                
+                <p class="text-muted mb-4">You will be redirected to Stripe for secure payment.</p>
+                
+                <!-- In a real app, this would call a backend route to create a Stripe Session -->
+                <button class="btn btn-primary btn-lg px-5">Pay with Stripe</button>
+                
+                <div class="mt-4">
+                    <img src="https://checkout.stripe.com/img/v3/home/twitter.png" alt="Stripe" height="30" style="opacity: 0.5;">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

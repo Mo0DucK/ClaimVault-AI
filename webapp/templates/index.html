@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="hero-section text-center">
+    <div class="container">
+        <h1 class="display-4 fw-bold">Turn Confusing Letters Into Your Inheritance</h1>
+        <p class="lead mb-4">Received a cryptic letter about unclaimed property or inheritance? Our AI analyzes it, flags scams, and gives you a step-by-step claim kit.</p>
+        
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title mb-3">Start Your Free Analysis</h5>
+                        <form action="{{ url_for('upload') }}" method="post" enctype="multipart/form-data">
+                            <div class="mb-3">
+                                <label for="file" class="form-label text-start d-block">Upload Letter (PDF or Image)</label>
+                                <input class="form-control" type="file" id="file" name="file">
+                            </div>
+                            <div class="mb-3 text-start">
+                                <label for="text" class="form-label">Or Paste Letter Text</label>
+                                <textarea class="form-control" id="text" name="text" rows="4" placeholder="Paste the content of the letter here..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-lg w-100" id="analyze-btn">Analyze My Letter</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.querySelector('form').addEventListener('submit', function() {
+        document.getElementById('loading-overlay').style.display = 'flex';
+        document.getElementById('analyze-btn').disabled = true;
+    });
+</script>
+
+<div class="row mt-5">
+    <div class="col-md-4 text-center">
+        <h3>1. Upload</h3>
+        <p>Upload a photo or PDF of the notice you received.</p>
+    </div>
+    <div class="col-md-4 text-center">
+        <h3>2. Analyze</h3>
+        <p>Our AI identifies the asset, jurisdiction, and verifies if it's a scam.</p>
+    </div>
+    <div class="col-md-4 text-center">
+        <h3>3. Claim</h3>
+        <p>Get a personalized claim kit with auto-filled forms and step-by-step instructions.</p>
+    </div>
+</div>
+{% endblock %}
