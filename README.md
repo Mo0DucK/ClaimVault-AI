@@ -15,6 +15,10 @@ Turn confusing inheritance and unclaimed-asset letters into a plain-English, ste
 - **One-Time Kit ($79):** Personalized claim package with auto-filled forms and instructions.
 - **Monitoring Subscription ($149/yr):** Automated quarterly search across 50+ jurisdictions.
 
+## Published Surface
+
+The web application is served on **port 3000**.
+
 ## Tech Stack
 
 - **Backend:** Flask, Flask-SQLAlchemy, Flask-Login
