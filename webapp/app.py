@@ -1,5 +1,6 @@
 import os
 import json
+import mimetypes
 import stripe
 from flask import Flask, render_template, request, redirect, url_for, flash, session, send_from_directory
 from flask_login import LoginManager, login_user, logout_user, login_required, current_user
@@ -7,6 +8,10 @@ from werkzeug.utils import secure_filename
 from config import Config
 from models import db, User, Claim, Order
 import claim_ai
+
+# Ensure SVG MIME type is correct
+mimetypes.add_type('image/svg+xml', '.svg')
+mimetypes.add_type('image/svg+xml', '.svgz')
 
 app = Flask(__name__)
 app.config.from_object(Config)

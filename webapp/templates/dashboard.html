@@ -1,23 +1,26 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="row">
-    <div class="col-md-12 mb-4">
-        <h2>Your Claims Dashboard</h2>
-        <p class="text-muted">Manage your active claims and monitoring subscriptions.</p>
+<div class="row mb-4">
+    <div class="col-md-12">
+        <h2 class="fw-bold text-emerald">Your Dashboard</h2>
+        <p class="text-jewel-muted">Manage your claims and monitoring subscriptions.</p>
     </div>
 </div>
 
 <div class="row">
     <div class="col-md-8">
-        <div class="card shadow-sm mb-4">
-            <div class="card-header bg-white">
-                <h3 class="h5 mb-0">My Claims</h3>
+        <div class="card shadow-jewel mb-4 border-0" style="border-radius: 16px;">
+            <div class="card-header" style="background: linear-gradient(135deg, #0d5e3a, #1a7a4a); color: white; border-radius: 16px 16px 0 0 !important; padding: 16px 20px;">
+                <div class="d-flex align-items-center">
+                    <i class="bi bi-folder2-open me-2" style="color: #f5b342;"></i>
+                    <h3 class="h6 mb-0 fw-bold">My Claims</h3>
+                </div>
             </div>
-            <div class="card-body">
+            <div class="card-body p-0">
                 {% if claims %}
                 <div class="table-responsive">
-                    <table class="table align-middle">
+                    <table class="table align-middle mb-0">
                         <thead>
                             <tr>
                                 <th>Date</th>
@@ -35,18 +38,22 @@
                                 <td>{{ claim.asset_type }}</td>
                                 <td>
                                     {% if claim.is_scam %}
-                                        <span class="badge bg-danger">Scam Flagged</span>
+                                        <span class="badge-scam">Scam Flagged</span>
                                     {% elif claim.has_kit %}
-                                        <span class="badge bg-success">Kit Ready</span>
+                                        <span class="badge-kit">Kit Ready</span>
                                     {% else %}
-                                        <span class="badge bg-info">Analyzed</span>
+                                        <span class="badge-analyzed">Analyzed</span>
                                     {% endif %}
                                 </td>
                                 <td>
                                     {% if claim.has_kit %}
-                                        <a href="{{ url_for('kit', claim_id=claim.id) }}" class="btn btn-sm btn-primary">View Kit</a>
+                                        <a href="{{ url_for('kit', claim_id=claim.id) }}" class="btn btn-emerald btn-sm">
+                                            <i class="bi bi-eye me-1"></i> View Kit
+                                        </a>
                                     {% else %}
-                                        <a href="{{ url_for('checkout', item_type='kit') }}" class="btn btn-sm btn-outline-primary">Unlock Kit</a>
+                                        <a href="{{ url_for('checkout', item_type='kit') }}" class="btn btn-emerald-outline btn-sm">
+                                            Unlock Kit
+                                        </a>
                                     {% endif %}
                                 </td>
                             </tr>
@@ -55,26 +62,43 @@
                     </table>
                 </div>
                 {% else %}
-                <p class="text-center py-4">You haven't uploaded any letters yet. <a href="{{ url_for('index') }}">Start here</a>.</p>
+                <div class="text-center py-5">
+                    <i class="bi bi-inbox" style="font-size: 2.5rem; color: #d4c9b8;"></i>
+                    <p class="text-jewel-muted mt-2 mb-3">You haven't uploaded any letters yet.</p>
+                    <a href="{{ url_for('index') }}" class="btn btn-emerald">
+                        <i class="bi bi-upload me-1"></i> Start Here
+                    </a>
+                </div>
                 {% endif %}
             </div>
         </div>
     </div>
     
     <div class="col-md-4">
-        <div class="card shadow-sm">
-            <div class="card-header bg-white">
-                <h3 class="h5 mb-0">Active Subscriptions</h3>
+        <div class="card shadow-jewel border-0" style="border-radius: 16px;">
+            <div class="card-header" style="background: linear-gradient(135deg, #d4a017, #f5b342); color: #1a1a2e; border-radius: 16px 16px 0 0 !important; padding: 16px 20px;">
+                <div class="d-flex align-items-center">
+                    <i class="bi bi-graph-up-arrow me-2"></i>
+                    <h3 class="h6 mb-0 fw-bold">Monitoring</h3>
+                </div>
             </div>
             <div class="card-body text-center py-4">
                 {% if current_user.has_monitoring %}
-                    <p><strong>Monitoring:</strong> <span class="text-success">Active</span></p>
-                    <p class="small text-muted">We are currently monitoring 5 family surnames for you.</p>
-                    <a href="#" class="btn btn-outline-primary btn-sm">Manage Monitoring</a>
+                    <div class="mb-3">
+                        <i class="bi bi-check-circle-fill" style="font-size: 2rem; color: #0d5e3a;"></i>
+                    </div>
+                    <p class="fw-semibold mb-1 text-emerald">Active</p>
+                    <p class="small text-jewel-muted mb-3">We are currently monitoring up to 5 family surnames for you.</p>
+                    <a href="#" class="btn btn-emerald-outline btn-sm">Manage Monitoring</a>
                 {% else %}
-                    <p><strong>Monitoring:</strong> <span class="text-danger">Inactive</span></p>
-                    <p class="small text-muted">Monitor your family name across 50+ jurisdictions for new assets.</p>
-                    <a href="{{ url_for('checkout', item_type='subscription') }}" class="btn btn-primary">Enable Monitoring ($149/yr)</a>
+                    <div class="mb-3">
+                        <i class="bi bi-bell-slash" style="font-size: 2rem; color: #d4c9b8;"></i>
+                    </div>
+                    <p class="fw-semibold mb-1 text-emerald">Inactive</p>
+                    <p class="small text-jewel-muted mb-3">Monitor your family name across 50+ jurisdictions for new assets.</p>
+                    <a href="{{ url_for('checkout', item_type='subscription') }}" class="btn btn-gold w-100">
+                        <i class="bi bi-bell me-1"></i> Enable ($149/yr)
+                    </a>
                 {% endif %}
             </div>
         </div>

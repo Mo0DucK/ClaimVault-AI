@@ -1,30 +1,64 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="row justify-content-center">
-    <div class="col-md-6">
-        <div class="card shadow-sm text-center">
-            <div class="card-body py-5">
-                <h2 class="mb-4">Complete Your Order</h2>
+<div class="row justify-content-center" style="margin: 40px 0;">
+    <div class="col-md-6 col-lg-5">
+        <div class="text-center mb-4">
+            <h2 class="fw-bold text-emerald">Complete Your Order</h2>
+            <div class="divider-gold"></div>
+        </div>
+
+        <div class="card shadow-jewel border-0 pricing-card featured" style="border-radius: 24px;">
+            <div class="card-body text-center p-5">
                 {% if item_type == 'kit' %}
-                    <h3>Personalized Claim Kit</h3>
-                    <p class="display-6 fw-bold mb-4">$79.00</p>
-                    <p>Includes all forms, checklists, and instructions for your specific claim.</p>
+                    <!-- Kit Icon -->
+                    <div class="step-icon" style="background: linear-gradient(135deg, #f0ebe0, #e8e2d5); width: 76px; height: 76px; margin: 0 auto 16px;">
+                        <i class="bi bi-file-earmark-check" style="font-size: 34px; color: #0d5e3a;"></i>
+                    </div>
+                    <h3 class="fw-bold h4 text-emerald">Personalized Claim Kit</h3>
+                    <p class="display-6 fw-bold mb-3" style="color: #d4a017;">$79</p>
+                    <p class="text-jewel-muted small">Everything you need to submit your claim.</p>
+                    <ul class="list-unstyled text-start feature-check mb-4" style="max-width: 280px; margin: 0 auto;">
+                        <li><i class="bi bi-check-circle-fill"></i> AI-generated cover letter</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Pre-filled jurisdiction forms</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Document checklist with links</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Step-by-step instructions</li>
+                    </ul>
                 {% else %}
-                    <h3>Annual Monitoring</h3>
-                    <p class="display-6 fw-bold mb-4">$149.00/yr</p>
-                    <p>Quarterly automated searches across 50 U.S. states and major foreign registries.</p>
+                    <!-- Subscription Icon -->
+                    <div class="step-icon" style="background: linear-gradient(135deg, #fff8e1, #ffecb3); width: 76px; height: 76px; margin: 0 auto 16px;">
+                        <i class="bi bi-bell" style="font-size: 34px; color: #d4a017;"></i>
+                    </div>
+                    <h3 class="fw-bold h4 text-emerald">Annual Monitoring</h3>
+                    <p class="display-6 fw-bold mb-3" style="color: #d4a017;">$149<span style="font-size: 1rem; color: #88847a;">/yr</span></p>
+                    <p class="text-jewel-muted small">Quarterly automated searches across 50+ databases.</p>
+                    <ul class="list-unstyled text-start feature-check mb-4" style="max-width: 280px; margin: 0 auto;">
+                        <li><i class="bi bi-check-circle-fill"></i> Monitor up to 5 family surnames</li>
+                        <li><i class="bi bi-check-circle-fill"></i> 50 US state databases</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Major foreign registries</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Instant alert on match</li>
+                    </ul>
                 {% endif %}
                 
-                <hr class="my-4">
+                <hr class="my-4" style="border-color: #e8e2d5;">
                 
-                <p class="text-muted mb-4">You will be redirected to Stripe for secure payment.</p>
+                <p class="text-jewel-muted small mb-4">
+                    <i class="bi bi-lock-fill me-1" style="color: #0d5e3a;"></i>
+                    Secured by Stripe — your payment info is encrypted.
+                </p>
                 
-                <!-- In a real app, this would call a backend route to create a Stripe Session -->
-                <button class="btn btn-primary btn-lg px-5">Pay with Stripe</button>
+                <button class="btn btn-emerald w-100 btn-lg">
+                    <i class="bi bi-lock me-1"></i> Pay with Stripe
+                </button>
                 
-                <div class="mt-4">
-                    <img src="https://checkout.stripe.com/img/v3/home/twitter.png" alt="Stripe" height="30" style="opacity: 0.5;">
+                <div class="mt-3">
+                    <span class="small text-jewel-muted"><i class="bi bi-shield-check me-1" style="color: #0d5e3a;"></i> Secure payment</span>
+                </div>
+
+                <div class="mt-3">
+                    <a href="{{ url_for('index') }}" class="text-decoration-none small" style="color: #88847a; transition: color 0.2s;">
+                        <i class="bi bi-arrow-left me-1"></i> Back to analysis
+                    </a>
                 </div>
             </div>
         </div>

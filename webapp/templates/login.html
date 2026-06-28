@@ -1,19 +1,30 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="row justify-content-center mt-5">
-    <div class="col-md-4">
-        <div class="card shadow-sm">
-            <div class="card-body">
-                <h2 class="text-center mb-4">Login</h2>
+<div class="row justify-content-center" style="margin-top: 40px; margin-bottom: 40px;">
+    <div class="col-md-5 col-lg-4">
+        <div class="text-center mb-4">
+            <img src="{{ url_for('static', filename='images/logo.svg') }}" alt="ClaimVault AI" style="height: 52px; margin-bottom: 12px;">
+            <p class="text-jewel-muted small">Sign in to manage your claims and kits</p>
+        </div>
+        <div class="card shadow-jewel border-0" style="border-radius: 24px;">
+            <div class="card-body p-4">
+                <h2 class="h5 text-center fw-bold mb-4 text-emerald">Welcome Back</h2>
                 <form action="{{ url_for('login') }}" method="post">
                     <div class="mb-3">
-                        <label for="email" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="email" name="email" required placeholder="Enter your email">
-                        <div class="form-text">We'll use this to save your analysis and kits.</div>
+                        <label for="email" class="form-label fw-semibold" style="color: #444;">Email address</label>
+                        <input type="email" class="form-control" id="email" name="email" required placeholder="you@example.com">
+                        <div class="form-text text-jewel-muted small">We'll use this to save your analysis and kits.</div>
                     </div>
-                    <button type="submit" class="btn btn-primary w-100">Continue</button>
+                    <button type="submit" class="btn btn-emerald w-100">
+                        <i class="bi bi-box-arrow-in-right me-1"></i> Continue
+                    </button>
                 </form>
+                <hr class="my-4" style="border-color: #e8e2d5;">
+                <p class="text-center small mb-0 text-jewel-muted">
+                    <i class="bi bi-shield-check me-1" style="color: #0d5e3a;"></i>
+                    No password needed — we'll send a magic link to your email.
+                </p>
             </div>
         </div>
     </div>

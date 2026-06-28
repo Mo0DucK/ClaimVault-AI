@@ -1,0 +1,500 @@
+/* ===== ClaimVault AI — Jewel Tone Design System ===== */
+/* Primary: Deep emerald (#0d5e3a, #1a7a4a, #2d8a4e)
+   Gold: (#d4a017, #f5b342, #e8b830)
+   Dark: (#0a2a1f, #1a2e2a)
+   Light/Cream: (#faf7f0, #f7f2e9, #f0ebe0)
+   Accent green: (#4ade80, #2ecc71) */
+
+/* === Base === */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #faf7f0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #1a1a2e;
+}
+
+/* === Navbar === */
+.navbar-brand {
+    padding: 0;
+    line-height: 1;
+}
+
+.nav-link {
+    position: relative;
+    font-weight: 500;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: #f5b342;
+    transition: width 0.3s ease;
+    border-radius: 2px;
+}
+
+.nav-link:hover::after {
+    width: 60%;
+}
+
+/* === Cards === */
+.card {
+    border: none;
+    border-radius: 16px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    background: #ffffff;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 35px rgba(13, 94, 58, 0.1) !important;
+}
+
+.card-header {
+    border-radius: 16px 16px 0 0 !important;
+}
+
+/* === Buttons === */
+.btn-emerald {
+    background: linear-gradient(135deg, #0d5e3a, #1a7a4a);
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 15px rgba(13, 94, 58, 0.25);
+}
+
+.btn-emerald:hover {
+    background: linear-gradient(135deg, #1a7a4a, #2d8a4e);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(13, 94, 58, 0.35);
+}
+
+.btn-emerald:active {
+    transform: translateY(0);
+}
+
+.btn-gold {
+    background: linear-gradient(135deg, #d4a017, #f5b342);
+    color: #1a1a2e;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 10px;
+    font-weight: 700;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 15px rgba(212, 160, 23, 0.3);
+}
+
+.btn-gold:hover {
+    background: linear-gradient(135deg, #e8b830, #f7cc5a);
+    color: #1a1a2e;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(212, 160, 23, 0.4);
+}
+
+.btn-gold-outline {
+    background: transparent;
+    color: #d4a017;
+    border: 2px solid #d4a017;
+    padding: 10px 26px;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: all 0.25s ease;
+}
+
+.btn-gold-outline:hover {
+    background: linear-gradient(135deg, #d4a017, #f5b342);
+    color: #1a1a2e;
+    transform: translateY(-2px);
+}
+
+.btn-emerald-outline {
+    background: transparent;
+    color: #0d5e3a;
+    border: 2px solid #0d5e3a;
+    padding: 10px 26px;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: all 0.25s ease;
+}
+
+.btn-emerald-outline:hover {
+    background: linear-gradient(135deg, #0d5e3a, #1a7a4a);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* === Hero Section === */
+.hero-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(to top, #faf7f0, transparent);
+    pointer-events: none;
+    z-index: 2;
+}
+
+/* === Section Styles === */
+.section-jewel {
+    padding: 60px 0;
+}
+
+/* === Step Cards === */
+.step-card {
+    border: none;
+    border-radius: 20px;
+    padding: 28px 24px;
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #ffffff;
+    border: 1px solid rgba(13, 94, 58, 0.06);
+}
+
+.step-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(13, 94, 58, 0.12) !important;
+}
+
+.step-icon {
+    width: 76px;
+    height: 76px;
+    border-radius: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step-card:hover .step-icon {
+    transform: scale(1.1);
+    box-shadow: 0 8px 25px rgba(13, 94, 58, 0.15);
+}
+
+/* === Badges === */
+.badge-scam {
+    background: linear-gradient(135deg, #dc2626, #ef4444);
+    color: white;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+}
+
+.badge-legit {
+    background: linear-gradient(135deg, #0d5e3a, #2d8a4e);
+    color: white;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+}
+
+.badge-kit {
+    background: linear-gradient(135deg, #d4a017, #f5b342);
+    color: #1a1a2e;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+}
+
+.badge-analyzed {
+    background: linear-gradient(135deg, #8b5cf6, #a78bfa);
+    color: white;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+}
+
+/* === Forms === */
+.form-control:focus,
+.form-select:focus {
+    border-color: #1a7a4a;
+    box-shadow: 0 0 0 3px rgba(13, 94, 58, 0.15);
+}
+
+.form-control {
+    border-radius: 10px;
+    border: 1.5px solid #e0ddd5;
+    padding: 10px 14px;
+    background: #ffffff;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-control:hover {
+    border-color: #b8b4aa;
+}
+
+/* === Alerts === */
+.alert-jewel {
+    background: linear-gradient(135deg, #f0ebe0, #e8e2d5);
+    border: 1px solid rgba(13, 94, 58, 0.12);
+    color: #1a1a2e;
+    border-radius: 12px;
+}
+
+/* === Footer === */
+.footer-jewel {
+    background: linear-gradient(135deg, #0a2a1f, #0d5e3a);
+    color: rgba(255, 255, 255, 0.85);
+    padding: 28px 0;
+    margin-top: auto;
+}
+
+.footer-jewel a {
+    color: #f5b342;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-jewel a:hover {
+    color: #f7cc5a;
+}
+
+/* === Dividers & Accents === */
+.divider-gold {
+    height: 3px;
+    width: 60px;
+    background: linear-gradient(135deg, #d4a017, #f5b342);
+    border-radius: 3px;
+    margin: 0 auto 16px;
+}
+
+/* === Loading Overlay === */
+#loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(250, 247, 240, 0.94);
+    backdrop-filter: blur(10px);
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+#loading-overlay .spinner-border {
+    color: #d4a017 !important;
+    width: 3rem;
+    height: 3rem;
+}
+
+/* === Tables === */
+.table thead th {
+    background: linear-gradient(135deg, #f0ebe0, #e8e2d5);
+    color: #0d5e3a;
+    font-weight: 700;
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid rgba(13, 94, 58, 0.15);
+    padding: 14px 12px;
+}
+
+.table td {
+    padding: 12px;
+    vertical-align: middle;
+}
+
+/* === Pricing Cards === */
+.pricing-card {
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    border-radius: 20px;
+}
+
+.pricing-card:hover {
+    border-color: #d4a017;
+    box-shadow: 0 12px 40px rgba(212, 160, 23, 0.15);
+}
+
+.pricing-card.featured {
+    border-color: #d4a017;
+    box-shadow: 0 8px 30px rgba(212, 160, 23, 0.12);
+}
+
+/* === Modal === */
+.modal-content {
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.modal-header {
+    background: linear-gradient(135deg, #0d5e3a, #1a7a4a);
+    color: white;
+    border-radius: 0 !important;
+    padding: 18px 24px;
+}
+
+.modal-header .btn-close {
+    filter: brightness(0) invert(1);
+}
+
+/* === Utility Classes === */
+.text-emerald {
+    color: #0d5e3a !important;
+}
+
+.text-gold {
+    color: #d4a017 !important;
+}
+
+.bg-cream {
+    background-color: #faf7f0 !important;
+}
+
+.bg-cream-dark {
+    background-color: #f7f2e9 !important;
+}
+
+.shadow-jewel {
+    box-shadow: 0 6px 24px rgba(13, 94, 58, 0.1);
+}
+
+/* === Animated gold shimmer for CTAs === */
+@keyframes shimmer {
+    0% { background-position: -200% center; }
+    100% { background-position: 200% center; }
+}
+
+.shimmer-gold {
+    background: linear-gradient(90deg, #d4a017 0%, #f5b342 25%, #f7cc5a 50%, #f5b342 75%, #d4a017 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: shimmer 3s ease-in-out infinite;
+}
+
+/* === Hover lift === */
+.hover-lift {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(13, 94, 58, 0.12);
+}
+
+/* === Dot pattern bg === */
+.dot-pattern {
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.07) 1.5px, transparent 1.5px);
+    background-size: 32px 32px;
+}
+
+/* === Gold border accent === */
+.border-accent-left {
+    border-left: 4px solid #d4a017 !important;
+}
+
+.border-accent-emerald {
+    border-left: 4px solid #0d5e3a !important;
+}
+
+/* === Small text === */
+.text-jewel-muted {
+    color: #88847a;
+    font-size: 0.875rem;
+}
+
+/* === Feature lists === */
+.feature-check li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.feature-check li i {
+    color: #0d5e3a;
+    margin-right: 10px;
+    font-size: 1.1rem;
+}
+
+/* === Step numbers === */
+.step-number {
+    width: 34px;
+    height: 34px;
+    background: linear-gradient(135deg, #0d5e3a, #1a7a4a);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-right: 14px;
+}
+
+/* === Print === */
+@media print {
+    .navbar, .footer-jewel, #loading-overlay, .btn, .modal-footer {
+        display: none !important;
+    }
+    .card {
+        box-shadow: none !important;
+        border: 1px solid #ddd !important;
+    }
+    .card-header {
+        background: #0d5e3a !important;
+        color: white !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+}
+
+/* === Responsive === */
+@media (max-width: 576px) {
+    .hero-section {
+        padding: 60px 0 40px !important;
+    }
+    .section-jewel {
+        padding: 40px 0;
+    }
+}
+
+/* === Smooth scroll === */
+html {
+    scroll-behavior: smooth;
+}
+
+/* === Animated gradient hero === */
+.hero-gradient {
+    background: linear-gradient(135deg, #0a2a1f 0%, #0d5e3a 40%, #1a7a4a 70%, #0d5e3a 100%);
+    background-size: 200% 200%;
+    animation: gradientShift 10s ease-in-out infinite;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* === Glow accent === */
+.glow-gold {
+    box-shadow: 0 0 30px rgba(212, 160, 23, 0.15);
+}

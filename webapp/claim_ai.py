@@ -12,8 +12,12 @@ INTERNATIONAL_KB = os.path.join(KB_DIR, 'international_claims.json')
 SCAM_KB = os.path.join(KB_DIR, 'scam_database.json')
 
 class ClaimVaultAI:
-    def __init__(self, google_api_key=None):
-        self.classifier = DocumentClassifier(google_api_key)
+    def __init__(self, api_key=None):
+        """
+        Initializes the AI orchestrator.
+        api_key: Optional API key for the classifier (if not set in env)
+        """
+        self.classifier = DocumentClassifier(api_key)
         self.scam_detector = ScamDetector(SCAM_KB)
         self.guide_generator = GuideGenerator(STATE_KB, INTERNATIONAL_KB)
 
@@ -33,12 +37,12 @@ class ClaimVaultAI:
         # 1. Preliminary Scam Detection (Pattern Matching)
         scam_score, scam_findings = self.scam_detector.detect(extracted_text)
 
-        # 2. Classification using Gemini
+        # 2. Classification using AI (OpenRouter/OpenAI/Gemini)
         kb_context = self._get_kb_summary()
         classification = self.classifier.classify(extracted_text, kb_context)
 
         # 3. Combine and Structure Results
-        # Be conservative: if scam detector finds anything or Gemini flags it
+        # Be conservative: if scam detector finds anything or AI flags it
         is_scam = classification.get("is_scam", False) or (scam_score > 0.1)
         
         analysis = {
@@ -49,9 +53,6 @@ class ClaimVaultAI:
             "confidence": classification.get("confidence", 0.0),
             "overview": classification.get("overview", "No overview available.")
         }
-
-        # Keep a copy of extracted text for internal use if needed
-        analysis["_internal_extracted_text"] = extracted_text[:1000]
 
         return analysis
 
@@ -76,11 +77,11 @@ class ClaimVaultAI:
 
     def _get_kb_summary(self):
         # Provide names of states and international jurisdictions for context
-        summary = "Known US States: Alabama, Alaska, Arizona, ..., Wyoming. "
+        summary = "Known US States: Alabama, Alaska, Arizona, Arkansas, California, Colorado, Connecticut, Delaware, Florida, Georgia, Hawaii, Idaho, Illinois, Indiana, Iowa, Kansas, Kentucky, Louisiana, Maine, Maryland, Massachusetts, Michigan, Minnesota, Mississippi, Missouri, Montana, Nebraska, Nevada, New Hampshire, New Jersey, New Mexico, New York, North Carolina, North Dakota, Ohio, Oklahoma, Oregon, Pennsylvania, Rhode Island, South Carolina, South Dakota, Tennessee, Texas, Utah, Vermont, Virginia, Washington, West Virginia, Wisconsin, Wyoming. "
         summary += "Known International: Swiss Bank Ombudsman, German Nachlassgericht, UK Dormant Assets, Israeli Land Registry, Italian Postal Bonds, Polish Restitution."
         return summary
 
-# Integration Helpers
+# Integration Helpers for the Web App
 def analyze_letter(file_path=None, text=None):
     orchestrator = ClaimVaultAI()
     return orchestrator.analyze_letter(file_path, text)

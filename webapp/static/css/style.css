@@ -1,4 +1,4 @@
-/* Custom styles for ClaimVault AI */
+/* ClaimVault AI — Base Styles */
 
 body {
     min-height: 100vh;
@@ -10,23 +10,43 @@ body {
     margin-top: auto;
 }
 
-.hero-section {
-    border-radius: 15px;
-    margin-bottom: 2rem;
+/* Gold navbar link hover */
+.nav-link.hover-gold:hover,
+a.hover-gold:hover {
+    color: #f5b342 !important;
 }
 
-.card {
-    border: none;
-    border-radius: 10px;
+/* Upload drop zone */
+.upload-zone {
+    border: 2px dashed #d4c9b8;
+    border-radius: 14px;
+    padding: 28px;
+    text-align: center;
+    background: #faf7f0;
+    transition: all 0.25s ease;
+    cursor: pointer;
 }
 
-.btn-lg {
-    padding: 0.8rem 2rem;
+.upload-zone:hover,
+.upload-zone.dragover {
+    border-color: #d4a017;
+    background: #f7f2e9;
 }
 
-/* Mobile-first adjustments */
+/* File input hidden */
+input[type="file"].file-input-hidden {
+    display: none;
+}
+
+/* Navbar logo sizing */
+.navbar-brand-logo {
+    height: 34px;
+    width: auto;
+    display: block;
+}
+
 @media (max-width: 576px) {
-    .hero-section {
-        padding: 40px 15px;
+    .navbar-brand-logo {
+        height: 28px;
     }
 }

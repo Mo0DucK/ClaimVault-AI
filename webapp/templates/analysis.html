@@ -3,54 +3,83 @@
 {% block content %}
 <div class="row justify-content-center">
     <div class="col-md-8">
-        <div class="card shadow-sm mb-4">
-            <div class="card-header bg-white">
-                <h2 class="h4 mb-0">Analysis Results</h2>
+
+        <!-- Analysis Results Card -->
+        <div class="card shadow-jewel mb-4">
+            <div class="card-header" style="background: linear-gradient(135deg, #0d5e3a, #1a7a4a); color: white; padding: 18px 24px; border-radius: 16px 16px 0 0 !important;">
+                <div class="d-flex align-items-center">
+                    <i class="bi bi-gem me-2" style="font-size: 1.2rem; color: #f5b342;"></i>
+                    <h2 class="h5 mb-0 fw-bold">Analysis Results</h2>
+                </div>
             </div>
-            <div class="card-body">
+            <div class="card-body p-4">
                 <div class="row mb-4">
-                    <div class="col-sm-4 fw-bold">Jurisdiction:</div>
+                    <div class="col-sm-4 fw-bold text-emerald">Jurisdiction</div>
                     <div class="col-sm-8">{{ analysis.jurisdiction.name if analysis.jurisdiction is mapping else analysis.jurisdiction }}</div>
                 </div>
                 <div class="row mb-4">
-                    <div class="col-sm-4 fw-bold">Status:</div>
+                    <div class="col-sm-4 fw-bold text-emerald">Status</div>
                     <div class="col-sm-8">
                         {% if analysis.is_scam %}
-                            <span class="badge bg-danger mb-2">Potential Scam Detected</span>
+                            <span class="badge-scam"><i class="bi bi-exclamation-triangle-fill me-1"></i> Potential Scam Detected</span>
                             {% if analysis.scam_warnings %}
-                            <ul class="text-danger small mb-0">
-                                {% for warning in analysis.scam_warnings %}
-                                <li>{{ warning }}</li>
-                                {% endfor %}
-                            </ul>
+                            <div class="mt-2 p-3" style="background: #fef2f2; border-radius: 10px; border-left: 4px solid #dc2626;">
+                                <ul class="text-danger small mb-0 ps-3">
+                                    {% for warning in analysis.scam_warnings %}
+                                    <li>{{ warning }}</li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
                             {% endif %}
                         {% else %}
-                            <span class="badge bg-success">Likely Legitimate</span>
+                            <span class="badge-legit"><i class="bi bi-shield-check me-1"></i> Likely Legitimate</span>
                         {% endif %}
                     </div>
                 </div>
                 <div class="row mb-4">
-                    <div class="col-sm-4 fw-bold">Asset Type:</div>
+                    <div class="col-sm-4 fw-bold text-emerald">Asset Type</div>
                     <div class="col-sm-8">{{ analysis.asset_type }}</div>
                 </div>
-                <div class="row mb-4">
-                    <div class="col-sm-4 fw-bold">Process Overview:</div>
+                <div class="row mb-0">
+                    <div class="col-sm-4 fw-bold text-emerald">Overview</div>
                     <div class="col-sm-8">{{ analysis.overview }}</div>
                 </div>
             </div>
         </div>
 
-        <div class="card border-primary mb-4">
-            <div class="card-body text-center">
-                <h3 class="h5">Ready to recover your funds?</h3>
-                <p>We can generate a full personalized claim package including auto-filled forms, a submission checklist, and a professional cover letter.</p>
-                <a href="{{ url_for('checkout', item_type='kit') }}" class="btn btn-primary btn-lg">Unlock Full Claim Kit ($79)</a>
+        <!-- Call to Action Cards -->
+        <div class="row g-3 mb-4">
+            <div class="col-md-6">
+                <div class="card shadow-sm border-0 h-100 hover-lift" style="border-radius: 16px; border-left: 4px solid #d4a017 !important;">
+                    <div class="card-body text-center p-4">
+                        <i class="bi bi-file-earmark-check" style="font-size: 2rem; color: #0d5e3a;"></i>
+                        <h3 class="h5 mt-2 fw-bold text-emerald">Ready to recover your funds?</h3>
+                        <p class="small text-jewel-muted">Get a full personalized claim package with auto-filled forms, document checklist, and professional cover letter.</p>
+                        <a href="{{ url_for('checkout', item_type='kit') }}" class="btn btn-emerald w-100 mt-2">
+                            <i class="bi bi-unlock me-1"></i> Unlock Full Claim Kit — $79
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card shadow-sm border-0 h-100 hover-lift" style="border-radius: 16px; border-left: 4px solid #0d5e3a !important;">
+                    <div class="card-body text-center p-4">
+                        <i class="bi bi-bell" style="font-size: 2rem; color: #d4a017;"></i>
+                        <h3 class="h5 mt-2 fw-bold text-emerald">Or monitor for new assets</h3>
+                        <p class="small text-jewel-muted">Quarterly automated searches across 50+ U.S. and international databases for up to 5 family surnames.</p>
+                        <a href="{{ url_for('checkout', item_type='subscription') }}" class="btn btn-gold w-100 mt-2">
+                            <i class="bi bi-search me-1"></i> Start Monitoring — $149/yr
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
-        
-        <div class="text-center">
-            <p class="text-muted">Or monitor your family name for new assets across 50+ jurisdictions.</p>
-            <a href="{{ url_for('checkout', item_type='subscription') }}" class="btn btn-outline-secondary">Start Monitoring ($149/yr)</a>
+
+        <!-- Back Link -->
+        <div class="text-center mt-2 mb-4">
+            <a href="{{ url_for('index') }}" class="text-decoration-none small hover-gold" style="color: #88847a; transition: color 0.2s;">
+                <i class="bi bi-arrow-left me-1"></i> Analyze another letter
+            </a>
         </div>
     </div>
 </div>

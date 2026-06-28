@@ -3,60 +3,90 @@
 {% block content %}
 <div class="row justify-content-center">
     <div class="col-md-10">
-        <div class="card shadow-sm mb-4">
-            <div class="card-header bg-white d-flex justify-content-between align-items-center py-3">
-                <h2 class="h4 mb-0">Claim Kit: {{ claim.jurisdiction_name }} #{{ claim.id }}</h2>
-                <div class="btn-group">
-                    <button class="btn btn-success" onclick="window.print()">Print Instructions</button>
-                    <button class="btn btn-outline-success">Download PDF Package</button>
+        <!-- Kit Header -->
+        <div class="card shadow-jewel mb-4 border-0" style="border-radius: 24px;">
+            <div class="card-header d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center" style="background: linear-gradient(135deg, #0d5e3a, #1a7a4a); color: white; border-radius: 24px 24px 0 0 !important; padding: 20px 24px;">
+                <div>
+                    <h2 class="h4 mb-1 fw-bold">
+                        <i class="bi bi-gem me-2" style="color: #f5b342;"></i>
+                        Claim Kit: {{ claim.jurisdiction_name }} #{{ claim.id }}
+                    </h2>
+                    <span class="small" style="color: rgba(255,255,255,0.75);">Your personalized claim package</span>
+                </div>
+                <div class="mt-2 mt-md-0">
+                    <button class="btn btn-sm me-1" style="background: rgba(245, 179, 66, 0.2); color: #f5b342; border: 1px solid rgba(245, 179, 66, 0.3);" onclick="window.print()">
+                        <i class="bi bi-printer me-1"></i> Print
+                    </button>
+                    <button class="btn btn-sm" style="background: rgba(255,255,255,0.1); color: white; border: 1px solid rgba(255,255,255,0.2);">
+                        <i class="bi bi-download me-1"></i> Download PDF
+                    </button>
                 </div>
             </div>
-            <div class="card-body">
-                <div class="row mb-4">
-                    <div class="col-md-12">
-                        <div class="alert alert-success">
-                            <h4 class="alert-heading">Your claim is likely legitimate!</h4>
-                            <p>Our AI has verified this notice against the official {{ claim.jurisdiction_name }} database. Follow the steps below to reclaim your assets.</p>
+            <div class="card-body p-4">
+                <!-- Verification Alert -->
+                <div class="mb-4 p-3" style="background: linear-gradient(135deg, #f0ebe0, #e8e2d5); border-radius: 14px; border-left: 4px solid #d4a017;">
+                    <div class="d-flex">
+                        <i class="bi bi-shield-check me-2 mt-1" style="font-size: 1.3rem; color: #0d5e3a;"></i>
+                        <div>
+                            <h5 class="fw-semibold mb-1 text-emerald">Your claim is likely legitimate!</h5>
+                            <p class="mb-0 small text-jewel-muted">Our AI has verified this notice against the official {{ claim.jurisdiction_name }} database. Follow the steps below to reclaim your assets.</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="row">
+                <div class="row g-4">
+                    <!-- Left: Steps -->
                     <div class="col-md-7">
-                        <h4 class="h5 border-bottom pb-2">Step-by-Step Instructions</h4>
+                        <h4 class="fw-bold h5 pb-2 text-emerald" style="border-bottom: 2px solid #f0ebe0;">
+                            <i class="bi bi-list-ol me-2"></i> Step-by-Step Instructions
+                        </h4>
                         <div class="mt-3">
                             {{ kit.guide_html | safe if kit.guide_html else kit.instructions | safe }}
                         </div>
                         
                         {% if kit.steps %}
-                        <ol class="list-group list-group-numbered mb-4 mt-3">
+                        <div class="mt-3">
                             {% for step in kit.steps %}
-                            <li class="list-group-item">{{ step }}</li>
+                            <div class="d-flex mb-3">
+                                <div class="step-number">{{ loop.index }}</div>
+                                <div class="flex-grow-1 pt-1">
+                                    <p class="mb-0">{{ step }}</p>
+                                </div>
+                            </div>
                             {% endfor %}
-                        </ol>
+                        </div>
                         {% endif %}
                     </div>
                     
+                    <!-- Right: Documents + Cover Letter -->
                     <div class="col-md-5">
-                        <div class="card bg-light mb-4">
-                            <div class="card-body">
-                                <h5 class="h6">Required Documents</h5>
-                                <ul class="list-group list-group-flush small bg-transparent">
+                        <!-- Required Documents -->
+                        <div class="card mb-3" style="background: #faf7f0; border: 1px solid #e8e2d5; border-radius: 14px;">
+                            <div class="card-body p-3">
+                                <h5 class="fw-bold h6 mb-3 text-emerald">
+                                    <i class="bi bi-journal-text me-2"></i> Required Documents
+                                </h5>
+                                <ul class="list-unstyled small mb-0">
                                     {% for doc in kit.required_documents %}
-                                    <li class="list-group-item bg-transparent px-0 d-flex justify-content-between">
-                                        {{ doc }}
-                                        <span class="text-primary"><i class="bi bi-info-circle"></i></span>
+                                    <li class="d-flex align-items-center py-2" style="border-bottom: 1px solid #e8e2d5;">
+                                        <i class="bi bi-file-text me-2" style="color: #0d5e3a;"></i>
+                                        <span class="flex-grow-1">{{ doc }}</span>
+                                        <i class="bi bi-info-circle" style="color: #d4a017; cursor: pointer;" title="More info"></i>
                                     </li>
                                     {% endfor %}
                                 </ul>
                             </div>
                         </div>
 
-                        <div class="card border-primary">
-                            <div class="card-body">
-                                <h5 class="h6">Personalized Cover Letter</h5>
-                                <p class="small text-muted">A pre-written letter to the jurisdiction authority, ready to print.</p>
-                                <button class="btn btn-sm btn-primary w-100" data-bs-toggle="modal" data-bs-target="#letterModal">View Cover Letter</button>
+                        <!-- Cover Letter -->
+                        <div class="card" style="border: 2px solid #d4a017; border-radius: 14px; background: #ffffff;">
+                            <div class="card-body p-3 text-center">
+                                <i class="bi bi-envelope-paper" style="font-size: 1.5rem; color: #0d5e3a;"></i>
+                                <h5 class="fw-bold h6 mt-2 text-emerald">Personalized Cover Letter</h5>
+                                <p class="small text-jewel-muted mb-3">A pre-written letter to the jurisdiction authority, ready to print and sign.</p>
+                                <button class="btn btn-emerald w-100 btn-sm" data-bs-toggle="modal" data-bs-target="#letterModal">
+                                    <i class="bi bi-eye me-1"></i> View Cover Letter
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -66,20 +96,25 @@
     </div>
 </div>
 
-<!-- Letter Modal -->
+<!-- Cover Letter Modal -->
 <div class="modal fade" id="letterModal" tabindex="-1">
-  <div class="modal-dialog modal-lg">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">Your Personalized Cover Letter</h5>
+        <h5 class="modal-title fw-bold">
+          <i class="bi bi-envelope-paper me-2"></i>
+          Your Personalized Cover Letter
+        </h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
       </div>
-      <div class="modal-body">
-        <pre class="bg-light p-4 border" style="white-space: pre-wrap; font-family: 'Times New Roman', serif;">{{ kit.cover_letter }}</pre>
+      <div class="modal-body p-4">
+        <pre class="p-4 mb-0" style="background: #faf7f0; border: 1px solid #e8e2d5; border-radius: 10px; white-space: pre-wrap; font-family: 'Times New Roman', Times, serif; font-size: 0.95rem; line-height: 1.6;">{{ kit.cover_letter }}</pre>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" onclick="window.print()">Print Letter</button>
+      <div class="modal-footer" style="border-top: 1px solid #e8e2d5;">
+        <button type="button" class="btn btn-sm" style="background: #f0ebe0; color: #444; border-radius: 8px;" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-emerald btn-sm" onclick="window.print()">
+          <i class="bi bi-printer me-1"></i> Print Letter
+        </button>
       </div>
     </div>
   </div>

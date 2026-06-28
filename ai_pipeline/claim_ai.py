@@ -12,8 +12,8 @@ INTERNATIONAL_KB = os.path.join(KB_DIR, 'international_claims.json')
 SCAM_KB = os.path.join(KB_DIR, 'scam_database.json')
 
 class ClaimVaultAI:
-    def __init__(self, google_api_key=None):
-        self.classifier = DocumentClassifier(google_api_key)
+    def __init__(self, gemini_api_key=None):
+        self.classifier = DocumentClassifier(gemini_api_key)
         self.scam_detector = ScamDetector(SCAM_KB)
         self.guide_generator = GuideGenerator(STATE_KB, INTERNATIONAL_KB)
 
@@ -50,9 +50,6 @@ class ClaimVaultAI:
             "overview": classification.get("overview", "No overview available.")
         }
 
-        # Keep a copy of extracted text for internal use if needed
-        analysis["_internal_extracted_text"] = extracted_text[:1000]
-
         return analysis
 
     def generate_kit(self, analysis, user_info=None):
@@ -76,11 +73,11 @@ class ClaimVaultAI:
 
     def _get_kb_summary(self):
         # Provide names of states and international jurisdictions for context
-        summary = "Known US States: Alabama, Alaska, Arizona, ..., Wyoming. "
+        summary = "Known US States: Alabama, Alaska, Arizona, Arkansas, California, Colorado, Connecticut, Delaware, Florida, Georgia, Hawaii, Idaho, Illinois, Indiana, Iowa, Kansas, Kentucky, Louisiana, Maine, Maryland, Massachusetts, Michigan, Minnesota, Mississippi, Missouri, Montana, Nebraska, Nevada, New Hampshire, New Jersey, New Mexico, New York, North Carolina, North Dakota, Ohio, Oklahoma, Oregon, Pennsylvania, Rhode Island, South Carolina, South Dakota, Tennessee, Texas, Utah, Vermont, Virginia, Washington, West Virginia, Wisconsin, Wyoming. "
         summary += "Known International: Swiss Bank Ombudsman, German Nachlassgericht, UK Dormant Assets, Israeli Land Registry, Italian Postal Bonds, Polish Restitution."
         return summary
 
-# Integration Helpers
+# Integration Helpers for the Web App
 def analyze_letter(file_path=None, text=None):
     orchestrator = ClaimVaultAI()
     return orchestrator.analyze_letter(file_path, text)
